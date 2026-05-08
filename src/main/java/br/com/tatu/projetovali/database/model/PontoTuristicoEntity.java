@@ -16,7 +16,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-
+@ToString
 
 @Table(name = "ponto_turistico")
 public class PontoTuristicoEntity {
@@ -26,6 +26,8 @@ public class PontoTuristicoEntity {
     @Id
     private Integer id;
 
+    @Column(nullable = false, unique = true)
+    private String nome;
 
     @Column(length = 150, nullable = false)
     private String descricao;
@@ -52,7 +54,7 @@ public class PontoTuristicoEntity {
     private Categoria categoria;
 
 
-   @Column(name = " numero_curtidas ")
+   @Column(name = "numero_curtidas")
    private Long numeroCurtidas;
 
 
