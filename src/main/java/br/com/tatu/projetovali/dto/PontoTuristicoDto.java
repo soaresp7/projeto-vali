@@ -1,7 +1,6 @@
 package br.com.tatu.projetovali.dto;
 
-import br.com.tatu.projetovali.database.model.Categoria;
-import jakarta.persistence.*;
+import br.com.tatu.projetovali.typeEnum.Categoria;
 import lombok.*;
 
 import java.time.LocalTime;
@@ -18,7 +17,7 @@ import java.util.List;
 
 public class PontoTuristicoDto {
 
-        
+        private String nome;
         private String descricao;
         private String bairro;
         private String rua;

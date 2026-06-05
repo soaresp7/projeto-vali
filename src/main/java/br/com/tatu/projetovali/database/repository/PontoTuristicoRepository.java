@@ -1,9 +1,8 @@
 package br.com.tatu.projetovali.database.repository;
 
 
-import br.com.tatu.projetovali.database.model.Categoria;
 import br.com.tatu.projetovali.database.model.PontoTuristicoEntity;
-import org.jspecify.annotations.NonNull;
+import br.com.tatu.projetovali.typeEnum.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -13,7 +12,8 @@ public interface PontoTuristicoRepository extends JpaRepository<PontoTuristicoEn
 
 List<PontoTuristicoEntity> findAllByCategoria (Categoria categoria);
 
-PontoTuristicoEntity findbynome (String nome);
+PontoTuristicoEntity findByNome (String nome);
 
+void deleteByNome(String nome);
 
 }

@@ -1,4 +1,4 @@
-package br.com.tatu.projetovali.database.model;
+package br.com.tatu.projetovali.typeEnum;
 
 public enum Categoria {
 

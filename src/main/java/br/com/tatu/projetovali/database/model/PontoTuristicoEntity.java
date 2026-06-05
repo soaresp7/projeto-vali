@@ -1,6 +1,7 @@
 package br.com.tatu.projetovali.database.model;
 
 
+import br.com.tatu.projetovali.typeEnum.Categoria;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.ValueGenerationType;
