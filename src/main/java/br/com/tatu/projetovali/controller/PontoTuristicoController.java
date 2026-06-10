@@ -60,14 +60,14 @@ public List<PontoTuristicoDto> findAll(){
 
 
 
-@DeleteMapping("/{id}")
+@DeleteMapping("/id/{id}")
 @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteById( @PathVariable Integer id){
           pontoTuristicoService.delete(id);
     }
 
 
-@DeleteMapping("/{nome}")
+@DeleteMapping("/nome/{nome}")
 @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deteBynome(@PathVariable String nome){
     pontoTuristicoService.deleteByNome(nome);
