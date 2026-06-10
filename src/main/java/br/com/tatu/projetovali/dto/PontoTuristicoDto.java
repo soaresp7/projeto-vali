@@ -1,6 +1,9 @@
 package br.com.tatu.projetovali.dto;
 
+import br.com.tatu.projetovali.database.model.UsuarioEntity;
 import br.com.tatu.projetovali.typeEnum.Categoria;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.time.LocalTime;
@@ -14,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
+@ToString
 public class PontoTuristicoDto {
 
         private String nome;
@@ -28,7 +31,9 @@ public class PontoTuristicoDto {
         private List<String> telefone;
         private List<String> imagem;
         private List<String> email;
-
+        @JsonProperty("idCriador")
+        @JsonIgnore
+        private Integer idCriador;
 
 
 

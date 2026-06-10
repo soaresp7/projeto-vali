@@ -4,7 +4,7 @@ package br.com.tatu.projetovali.database.model;
 import br.com.tatu.projetovali.typeEnum.Categoria;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.ValueGenerationType;
+
 
 import java.time.LocalTime;
 import java.util.HashSet;
@@ -60,8 +60,10 @@ public class PontoTuristicoEntity {
 
 
 
-  @Column(length = 150, nullable = false)
-  private String idcriador;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_criador", nullable = false)
+    private UsuarioEntity idCriador;
+
 
 
     @ElementCollection

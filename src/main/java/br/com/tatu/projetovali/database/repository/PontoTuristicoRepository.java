@@ -2,6 +2,7 @@ package br.com.tatu.projetovali.database.repository;
 
 
 import br.com.tatu.projetovali.database.model.PontoTuristicoEntity;
+import br.com.tatu.projetovali.dto.PontoTuristicoDto;
 import br.com.tatu.projetovali.typeEnum.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 

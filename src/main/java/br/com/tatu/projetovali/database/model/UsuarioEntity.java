@@ -1,5 +1,6 @@
 package br.com.tatu.projetovali.database.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.AnyDiscriminatorImplicitValues;
@@ -29,7 +30,7 @@ public class UsuarioEntity implements UserDetails {
     private String nome;
     private String senha;
 
-
+    @JsonIgnore
     @ManyToMany(mappedBy = "usuarios")
     private Set<PontoTuristicoEntity> pontosCurtidos = new HashSet<>();
 
